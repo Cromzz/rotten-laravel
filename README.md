@@ -30,6 +30,6 @@ This is a [Laravel](https://laravel.com/) starter app that connects to a Railway
 - **Plugin Config**: To connect to a Railway Plugin, Postgres for example, you will need to utilize the environment variables listed for that plugin in the [Railway Docs](https://docs.railway.app/).
   See the `.env.example` for an example of using these with Postgres.
 - **Web server port**: Railway dynamically assigns a port for your webserver. We grab the `$PORT` environment variable in `docker/start-container` to set this on Artisan `serve`
-- **Logging**: Because the disk on Railway containers is ephemeral, we pipe the logs normally output to `storage/logs/laravel.log` to `stdout` [as seen here](https://github.com/sorrell/railavel/commit/2802b8c5032a13a601a903276ee2181678009f67)
+- **Logging**: Becaushe disk on Railway containers is ephemeral, we pipe the logs normally output to `storage/logs/laravel.log` to `stdout` [as seen here](https://github.com/sorrell/railavel/commit/2802b8c5032a13a601a903276ee2181678009f67)
 - **APP_KEY**: This starter will automatically generate the `APP_KEY` (`php artisan key:generate` in the `docker/start-container`)
 - **Migrations**: This starter automatically runs migrations on deploy (in the `docker/start-container`)
